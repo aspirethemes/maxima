@@ -1,0 +1,17 @@
+{{#if prev}}
+  <div class='o-grid__col o-grid__col--2-4-s'>
+    <a class='c-pagination' href='{{ page_url prev }}'>
+      <div class='c-pagination__icon c-pagination__icon--prev' data-icon='ei-chevron-left'></div>
+      <span class='c-pagination__text c-pagination__text--prev'>Previous</span>
+    </a>
+  </div>
+{{/if}}
+
+{{#if next}}
+  <div class='o-grid__col o-grid__col--end o-grid__col--2-4-s u-text-right'>
+    <a class='c-pagination' href='{{ page_url next }}'>
+      <span class='c-pagination__text c-pagination__text--next'>Next</span>
+      <div class='c-pagination__icon c-pagination__icon--next' data-icon='ei-chevron-right'></div>
+    </a>
+  </div>
+{{/if}}

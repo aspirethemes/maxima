@@ -1,0 +1,18 @@
+/*------------------------------------*\
+  Components > Subscribe Form
+\*------------------------------------*/
+
+.c-subscribe {
+  display: flex;
+  flex-wrap: wrap;
+
+  .form-group {
+    flex: 8;
+  }
+
+  &__btn {
+    position: relative;
+    left: -1px;
+    flex: 2;
+  }
+}

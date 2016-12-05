@@ -1,0 +1,24 @@
+/*------------------------------------*\
+  Components > Tag
+\*------------------------------------*/
+
+.c-tag {
+  text-align: center;
+  padding-bottom: double($base-spacing-unit);
+  margin-bottom: double($base-spacing-unit);
+  border-bottom: 1px solid $color-border;
+
+  &__name {
+    margin-bottom: 0;
+    font-size: double($font-size-small);
+    line-height: double($line-height-medium);
+  }
+
+  &__description {
+    margin-top: half($base-spacing-unit);
+    margin-bottom: 0;
+    font-size: $font-size-medium;
+    font-family: $font-sans-serif;
+    line-height: $line-height-medium;
+  }
+}

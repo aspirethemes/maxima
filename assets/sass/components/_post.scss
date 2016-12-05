@@ -1,0 +1,17 @@
+/*------------------------------------*\
+  Components > Post
+\*------------------------------------*/
+
+.c-post {
+  margin: 0 auto;
+  max-width: 740px;
+
+  &__title {
+    font-size: double($font-size-tiny);
+
+    @include mq($from: tablet) {
+      font-size: double($font-size-small);
+      line-height: double($line-height-medium);
+    }
+  }
+}

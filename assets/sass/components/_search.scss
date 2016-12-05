@@ -1,0 +1,99 @@
+/*------------------------------------*\
+  Components > Search
+\*------------------------------------*/
+
+.c-search {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding-top: doublequadruple($base-spacing-unit);
+
+  background: $bg-color-white;
+  transition: all $global-transition ease-in-out;
+  transform: translate(0, -100%) scale(0, 0);
+
+  @include mq($from: tablet) {
+    padding-top: quadruple($base-spacing-unit);
+  }
+
+  &.is-active {
+    transform: translate(0, 0) scale(1, 1);
+  }
+
+  &__input {
+    padding: 0;
+    width: 100%;
+    outline: none;
+    margin-bottom: $base-spacing-unit;
+
+    font-weight: $font-weight-light;
+    font-size: double($font-size-small);
+    line-height: double($line-height-small);
+
+    border: 0;
+    border-bottom: 1px solid $color-border;
+
+    @include mq($from: tablet) {
+      font-size: double($font-size-base);
+      line-height: double($line-height-medium);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: $base-spacing-unit;
+    right: $base-spacing-unit;
+
+    cursor: pointer;
+    fill: $color-text;
+    transition: $global-transition;
+
+    @include mq($from: tablet) {
+      top: double($base-spacing-unit);
+      right: double($base-spacing-unit);
+    }
+
+    &:hover {
+      fill: $color-gray;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.c-search-result {
+  display: none;
+  height: 80vh;
+  overflow: auto;
+  white-space: normal;
+  padding-right: double($base-spacing-unit);
+
+  &__head {
+    padding-bottom: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit;
+
+    color: $color-gray;
+    font-family: $font-sans-serif;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__item {
+    padding-bottom: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit;
+
+    font-family: $font-sans-serif;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__title {
+    display: block;
+  }
+
+  &__date {
+    font-size: $font-size-tiny;
+    line-height: $line-height-small;
+    color: $color-gray;
+  }
+}

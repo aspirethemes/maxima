@@ -1,0 +1,28 @@
+/*------------------------------------*\
+  Components > Site Navigation
+\*------------------------------------*/
+
+.c-nav {
+  &__item {
+    font-size: $font-size-medium;
+    font-family: $font-sans-serif;
+  }
+
+  &__link {
+    display: block;
+    transition: $global-transition;
+
+    &--current {
+      color: $color-brand;
+
+      .home-template &:not(:hover) {
+        color: $color-link;
+      }
+    }
+
+    @include attention() {
+      color: $color-brand;
+      text-decoration: none;
+    }
+  }
+}

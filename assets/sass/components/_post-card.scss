@@ -1,0 +1,99 @@
+/*------------------------------------*\
+  Components > Post Card
+\*------------------------------------*/
+
+.c-post-card {
+  overflow: hidden;
+  transform: translateX(0);
+  margin-bottom: double($base-spacing-unit);
+  background-color: $bg-color-gray;
+  border-bottom: 1px solid $color-border;
+
+  &__image-link {
+    display: block;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      content: '';
+      background-color: $bg-color-dark;
+      transition: $global-transition;
+      opacity: 0;
+    }
+  }
+
+  &__image {
+    @include mq($from: tablet) {
+      opacity: 0;
+      transition: opacity $global-transition ease-in-out;
+
+      &.is-inview {
+        opacity: 1;
+      }
+
+      @media screen and ( -webkit-min-device-pixel-ratio: 0 ) {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__info {
+    display: block;
+    padding: $base-spacing-unit 0;
+    text-decoration: none;
+    background-color: $bg-color-white;
+
+    &--no-image {
+      padding-top: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $color-text;
+    }
+  }
+
+  &__title {
+    margin-bottom: half($font-size-base);
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-medium;
+    font-family: $font-serif;
+    transition: $global-transition;
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: quarter($line-height-base);
+    font-size: $font-size-tiny;
+    font-family: $font-sans-serif;
+    line-height: $line-height-small;
+    text-transform: uppercase;
+    color: $color-gray;
+  }
+
+  &:hover {
+    .c-post-card__image-link:after {
+      opacity: .1;
+    }
+
+    .c-post-card__title {
+      color: $color-brand;
+    }
+  }
+
+  &__excerpt {
+    margin-bottom: half($font-size-base);
+    font-family: $font-sans-serif;
+  }
+
+  &__featured-icon {
+    position: absolute;
+    bottom: quarter($line-height-base);
+    left: quarter($line-height-base);
+    fill: $color-white;
+  }
+}

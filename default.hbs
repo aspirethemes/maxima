@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='description' content='{{ meta_description }}'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>{{ meta_title }}</title>
+
+  <link rel='shortcut icon' href='{{ asset '/favicon.ico' }}'>
+
+  {{> compiled/inline-css }}
+
+  {{ ghost_head }}
+</head>
+<body class='{{ body_class }}'>
+
+  <div class='js-off-canvas-container c-off-canvas-container'>
+
+    {{> header }}
+
+    {{{ body }}}
+
+    {{> footer}}
+
+    {{ ghost_foot }}
+  </div>
+
+  <script src='{{ asset 'js/app.min.js' }}'></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<footer class='c-footer'>
+  <div class='o-grid'>
+    <div class='o-grid__col o-grid__col--full'>
+
+      <ul class='o-plain-list c-social-nav u-text-center'>
+        {{# if @blog.twitter}}
+          <li class='c-social-nav__item'>
+            <a href='{{ twitter_url }}' target='_blank'>
+              <span class='c-social-nav__icon' data-icon='ei-sc-twitter' data-size='s'></span>
+            </a>
+          </li>
+        {{/if}}
+        {{# if @blog.facebook}}
+          <li class='c-social-nav__item'>
+            <a href='{{ facebook_url }}' target='_blank'>
+              <span class='c-social-nav__icon' data-icon='ei-sc-facebook' data-size='s'></span>
+            </a>
+          </li>
+        {{/if}}
+        <li class='c-social-nav__item'>
+          <a href='https://instagram.com/{{! Add Instagram handle }}' target='_blank'>
+            <span class='c-social-nav__icon' data-icon='ei-sc-instagram' data-size='s'></span>
+          </a>
+        </li>
+        <li class='c-social-nav__item'>
+          <a href='https://pinterest.com/{{! Add Pinterest handle }}' target='_blank' class='block'>
+            <span class='c-social-nav__icon' data-icon='ei-sc-pinterest' data-size='s'></span>
+          </a>
+        </li>
+        <li class='c-social-nav__item'>
+          <a href='https://vimeo.com/{{! Add Vimeo handle }}' target='_blank' class='block'>
+            <span class='c-social-nav__icon' data-icon='ei-sc-vimeo' data-size='s'></span>
+          </a>
+        </li>
+      </ul>
+
+      <div class='u-text-center'>
+        <span class='u-font-small u-font-sans-serif'>&copy; {{ date format='YYYY' }} {{ @blog.title }}</span>
+      </div>
+
+    </div>
+  </div>
+</footer>

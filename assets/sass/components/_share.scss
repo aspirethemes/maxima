@@ -1,0 +1,37 @@
+/*------------------------------------*\
+  Components > Share Icons
+\*------------------------------------*/
+
+.c-share {
+  display: flex;
+  border-radius: 3px;
+  border: 1px solid $color-border;
+  line-height: $line-height-small;
+
+  &__item {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid $color-border;
+
+    &:last-child { border-right: 0; }
+  }
+
+  &__link {
+    display: block;
+    padding: quarter($base-spacing-unit);
+
+    transition: $global-transition;
+
+    &:hover {
+      background-color: $bg-color-gray-light;
+
+      .c-share__icon--twitter { fill: $color-twitter; }
+      .c-share__icon--facebook { fill: $color-facebook; }
+    }
+  }
+
+  &__icon {
+    fill: $color-gray;
+    vertical-align: middle;
+  }
+}

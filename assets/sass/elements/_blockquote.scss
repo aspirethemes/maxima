@@ -1,0 +1,9 @@
+/*------------------------------------*\
+  Elements > Blockquote
+\*------------------------------------*/
+
+blockquote {
+  padding-left: $base-spacing-unit;
+  border-left: 3px solid $color-text;
+  font-style: italic;
+}

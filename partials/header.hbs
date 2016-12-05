@@ -1,0 +1,46 @@
+<header class='c-header'>
+
+  <div class='o-grid'>
+    <div class='o-grid__col o-grid__col--full'>
+      <div class='c-header__inner'>
+
+        <div class='o-grid'>
+          <div class='o-grid__col o-grid__col--1-4-s'>
+            <label class='js-off-canvas-toggle c-off-canvas-toggle' aria-label='Toggle navigation'>
+              <span class='c-off-canvas-toggle__icon'></span>
+            </label>
+          </div>
+
+          <div class='o-grid__col o-grid__col--2-4-s'>
+            <div class='c-logo u-text-center'>
+              {{#if @blog.logo}}
+                <a href='{{ @blog.url }}'>
+                  <img class='c-logo__img' src='{{ @blog.logo }}' alt='{{ @blog.title }}'>
+                </a>
+              {{else}}
+                <a class='c-logo__link' href='{{ @blog.url }}'>{{ @blog.title }}</a>
+              {{/if}}
+            </div>
+          </div>
+
+          <div class='o-grid__col o-grid__col--1-4-s'>
+            <div class='u-text-right'>
+              <a class="toggle-search-button js-search-toggle" href="#">
+                <span class='c-header__icon' data-icon="ei-search" data-size="s"></span>
+              </a>
+            </div>
+            <div class='c-off-canvas-content'>
+              <ul class='c-nav o-plain-list '>
+                {{ navigation }}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</header>
+
+{{> search-form }}
