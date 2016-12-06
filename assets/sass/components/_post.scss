@@ -14,4 +14,18 @@
       line-height: double($line-height-medium);
     }
   }
+
+  &__date {
+    display: block;
+    text-align: center;
+    margin-bottom: $base-spacing-unit;
+    font-size: $font-size-tiny;
+    font-family: $font-sans-serif;
+    line-height: $line-height-small;
+    color: $color-gray;
+  }
+
+  &__image {
+    margin-bottom: $font-size-base;
+  }
 }

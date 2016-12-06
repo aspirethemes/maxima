@@ -4,13 +4,18 @@
 
 <div class='o-wrapper'>
 
-  <article class='c-{{ post_class }}'>
-    <h1 class='c-post__title u-text-center'>{{ title }}</h1>
+  <div class='o-grid'>
+    <div class='o-grid__col o-grid__col--3-4-m o-grid__col--center'>
+      <article class='c-post'>
+        <h1 class='c-post__title u-text-center'>{{ title }}</h1>
 
-    <div class='c-content'>
-      {{ content }}
+        <div class='c-content'>
+          {{> post-image }}
+          {{ content }}
+        </div>
+      </article>
     </div>
-  </article>
+  </div>
 
 </div>
 

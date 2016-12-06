@@ -9,6 +9,7 @@ input[type='text'],
 input[type='tel'],
 input[type='number'],
 input[type='email'],
+select,
 textarea {
   width: 100%;
   padding: $base-spacing-unit;
@@ -20,7 +21,6 @@ textarea {
   font-size: $font-size-small;
   font-family: $font-sans-serif;
 
-  appearance: none;
   transition: $global-transition;
 
   @include attention() {

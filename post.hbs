@@ -8,8 +8,10 @@
     <div class='o-grid__col o-grid__col--3-4-m o-grid__col--center'>
       <article class='c-{{ post_class }}'>
         <h1 class='c-post__title u-text-center'>{{ title }}</h1>
+        <time class='c-post__date' datetime='{{ date format='YYYY-MM-DD' }}'>{{ date format='DD MMM YYYY' }}</time>
 
         <div class='c-content'>
+          {{> post-image }}
           {{ content }}
         </div>
 
