@@ -33,6 +33,10 @@
               <ul class='c-nav o-plain-list '>
                 {{ navigation }}
               </ul>
+
+              {{#if @blog.description}}
+                <p class='c-blog-desc'>{{@blog.description}}</p>
+              {{/if}}
             </div>
           </div>
         </div>

@@ -1,0 +1,13 @@
+/*------------------------------------*\
+  Components > Blog Description
+\*------------------------------------*/
+
+.c-blog-desc {
+  padding-top: $base-spacing-unit;
+  margin-top: $base-spacing-unit;
+  border-top: 1px solid $color-border;
+  color: $color-gray;
+  font-size: $font-size-small;
+  font-family: $font-sans-serif;
+  line-height: $line-height-small;
+}

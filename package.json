@@ -1,6 +1,6 @@
 {
   "name": "Maxima",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Minimal Blog & Magazine Ghost Theme",
   "main": "gulpfile.js",
   "scripts": {
