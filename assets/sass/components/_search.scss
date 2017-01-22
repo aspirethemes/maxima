@@ -9,7 +9,7 @@
   bottom: 0;
   left: 0;
   z-index: 100;
-  padding-top: doublequadruple($base-spacing-unit);
+  padding-top: double($base-spacing-unit);
 
   background: $bg-color-white;
   transition: all $global-transition ease-in-out;
