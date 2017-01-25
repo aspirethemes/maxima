@@ -89,6 +89,12 @@
 
   &__title {
     display: block;
+    line-height: $line-height-medium;
+
+    @include attention() {
+      color: $color-brand;
+      text-decoration: none;
+    }
   }
 
   &__date {

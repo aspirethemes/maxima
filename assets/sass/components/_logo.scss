@@ -5,7 +5,6 @@
 .c-logo {
   &__link {
     font-size: $font-size-base;
-    transition: $global-transition;
 
     @include attention() {
       color: $color-brand;
