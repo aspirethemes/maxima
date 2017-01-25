@@ -13,7 +13,6 @@
     line-height: $line-height-small;
 
     background-color: $bg-color-gray-light;
-    transition: $global-transition;
 
     @include attention() {
       text-decoration: none;

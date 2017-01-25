@@ -20,8 +20,6 @@
     display: block;
     padding: quarter($base-spacing-unit);
 
-    transition: $global-transition;
-
     &:hover {
       background-color: $bg-color-gray-light;
 

@@ -10,7 +10,6 @@
   &__icon {
     fill: $color-text;
     vertical-align: middle;
-    transition: $global-transition;
 
     @include attention() {
       fill: $color-brand;
