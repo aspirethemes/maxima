@@ -1,8 +1,7 @@
 {
   "name": "Maxima",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Minimal Blog & Magazine Ghost Theme",
-  "main": "gulpfile.js",
   "scripts": {
     "postinstall": "bower install"
   },
