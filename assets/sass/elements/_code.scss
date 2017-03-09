@@ -16,6 +16,7 @@ pre {
   line-height: $line-height-medium;
   white-space: pre-wrap;
   word-wrap: break-word;
+  word-break: break-all;
 }
 
 p code { padding: half(quarter($line-height-medium)) quarter($line-height-medium); }
