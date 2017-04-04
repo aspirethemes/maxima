@@ -59,16 +59,14 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-
   width: $off-canvas-width;
   height: 100%;
   padding: double($base-spacing-unit);
-
   transform: translate3d(- $off-canvas-width, 0, 0);
 }
 
 .c-off-canvas-container {
-  transform: translate3d(0, 0, 0);
+  -webkit-perspective: 1000;
   transition: transform $global-transition cubic-bezier(.16, .68, .43, .99);
 
   &.is-active {
@@ -85,4 +83,3 @@ body {
     }
   }
 }
-
