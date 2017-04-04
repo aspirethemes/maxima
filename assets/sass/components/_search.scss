@@ -82,9 +82,11 @@
   &__item {
     padding-bottom: $base-spacing-unit;
     margin-bottom: $base-spacing-unit;
-
     font-family: $font-sans-serif;
-    border-bottom: 1px solid $color-border;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-border;
+    }
   }
 
   &__title {
