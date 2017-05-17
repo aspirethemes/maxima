@@ -32,3 +32,16 @@
     clear: both;
   }
 }
+
+// Mixin to target IE
+//
+// // Example use:
+//
+// @include ie() {
+//   background-color: #000;
+// };
+@mixin ie {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}

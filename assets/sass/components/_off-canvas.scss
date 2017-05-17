@@ -2,7 +2,7 @@
   Components > Off Canvas
 \*------------------------------------*/
 
-$off-canvas-width: 250px;
+$off-canvas-width: 300px;
 
 .c-off-canvas-toggle {
   position: relative;
@@ -33,18 +33,31 @@ $off-canvas-width: 250px;
     &:before { transform: translateY(16px) }
     &:after { transform: translateY(7px); }
 
-    .c-off-canvas-toggle.is-active & {
-      top: half($base-spacing-unit);
-      background: $color-white;
-
-      visibility: hidden;
+    .c-off-canvas-toggle--close & {
+      height: 2px;
+      background-color: transparent;
 
       &:before,
-      &:after { visibility: visible; }
+      &:after {
+        position: relative;
+        visibility: visible;
+        background: $bg-color-dark;
+      }
 
-      &:before { transform: rotate(-45deg); }
-      &:after { transform: rotate(45deg); }
+      &:before {
+        top: 11px;
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        top: 9px;
+        transform: rotate(45deg);
+      }
     }
+  }
+
+  &--close {
+    margin-bottom: $base-spacing-unit;
   }
 }
 
@@ -59,10 +72,19 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
   width: $off-canvas-width;
   height: 100%;
-  padding: double($base-spacing-unit);
+  padding: ($base-spacing-unit + half($base-spacing-unit)) double($base-spacing-unit);
   transform: translate3d(- $off-canvas-width, 0, 0);
+
+  @include ie() {
+    background-color: $bg-color-white;
+
+    &.is-active {
+      left: $off-canvas-width;
+    }
+  };
 }
 
 .c-off-canvas-container {

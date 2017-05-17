@@ -2,9 +2,9 @@ $(document).ready(function() {
 
   'use strict';
 
-  // =================
+  // =====================
   // Responsive layout
-  // =================
+  // =====================
 
   // Init Masonry
   var $masonry_grid = $('.js-grid').masonry({
@@ -17,25 +17,26 @@ $(document).ready(function() {
     $masonry_grid.masonry('layout');
   });
 
-  // =================
+  // =====================
   // Responsive videos
-  // =================
+  // =====================
 
-  $('.o-wrapper').fitVids();
+  $('.o-wrapper').fitVids({
+    'customSelector': ['iframe[src*="ted.com"]']
+  });
 
-  // ===============
+  // =====================
   // Off Canvas menu
-  // ===============
+  // =====================
 
   $('.js-off-canvas-toggle').click(function(e) {
     e.preventDefault();
-    $('.js-off-canvas-toggle').toggleClass('is-active');
-    $('.js-off-canvas-container').toggleClass('is-active');
+    $('.js-off-canvas-content, .js-off-canvas-container').toggleClass('is-active');
   });
 
-  // ========================
+  // =====================
   // Post Card Images Fade
-  // ========================
+  // =====================
 
   $('.js-fadein').viewportChecker({
     classToAdd: 'is-inview', // Class to add to the elements when they are visible
@@ -43,9 +44,9 @@ $(document).ready(function() {
     removeClassAfterAnimation: true
   });
 
-  // ======
+  // =====================
   // Search
-  // ======
+  // =====================
 
   var search_field = $('.js-search-input'),
       search_results = $('.js-search-result'),
