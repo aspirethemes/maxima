@@ -6,6 +6,10 @@
   &__item {
     font-size: $font-size-small;
     font-family: $font-sans-serif;
+
+    &:not(:last-child) {
+      margin-bottom: quarter($base-spacing-unit);
+    }
   }
 
   &__link {
