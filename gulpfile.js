@@ -49,6 +49,7 @@
       './bower_components/jquery.fitvids/jquery.fitvids.js',
       './bower_components/jQuery-viewport-checker/dist/jquery.viewportchecker.min.js',
       './node_modules/evil-icons/assets/evil-icons.min.js',
+      './node_modules/prismjs/prism.js',
       './assets/js/jquery.ghostHunter.min.js',
       './assets/js/app.js'])
       .pipe(jshint())

@@ -21,9 +21,9 @@
     padding: quarter($base-spacing-unit);
 
     &:hover {
-      background-color: $bg-color-gray-light;
+      background-color: $bg-gray-light;
 
-      .c-share__icon--twitter { fill: $color-twitter; }
+      .c-share__icon--twitter  { fill: $color-twitter; }
       .c-share__icon--facebook { fill: $color-facebook; }
     }
   }
@@ -31,5 +31,6 @@
   &__icon {
     fill: $color-gray;
     vertical-align: middle;
+    transition: $global-transition;
   }
 }

@@ -5,7 +5,7 @@
 .c-tag-card {
   position: relative;
   margin-bottom: $line-height-base;
-  background-color: $bg-color-gray;
+  background-color: $bg-gray;
 
   &__image {
     display: block;
@@ -34,7 +34,7 @@
       width: 100%;
       content: '';
       opacity: .1;
-      background-color: $bg-color-dark;
+      background-color: $bg-dark;
       transition: $global-transition;
     }
 

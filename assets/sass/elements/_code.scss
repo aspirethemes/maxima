@@ -5,18 +5,22 @@
 pre,
 code {
   font-family: $font-monospace;
-  background-color: $bg-color-gray;
-}
-
-pre {
-  overflow: auto;
-  padding: double($base-spacing-unit);
-
   font-size: $font-size-medium;
-  line-height: $line-height-medium;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  word-break: break-all;
+  background-color: $bg-gray;
 }
 
 p code { padding: half(quarter($line-height-medium)) quarter($line-height-medium); }
+
+// Prism.js Customization
+
+pre[class*='language-'] {
+  padding: double($base-spacing-unit);
+  margin: $base-spacing-unit 0;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  white-space: pre-wrap;
+  word-break: break-all;
+  line-height: inherit;
+}

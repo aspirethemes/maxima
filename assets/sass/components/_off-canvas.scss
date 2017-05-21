@@ -18,7 +18,7 @@ $off-canvas-width: 300px;
     left: 0;
     height: 1px;
     width: 25px;
-    background: $bg-color-dark;
+    background: $bg-dark;
     cursor: pointer;
 
     &:before,
@@ -41,7 +41,7 @@ $off-canvas-width: 300px;
       &:after {
         position: relative;
         visibility: visible;
-        background: $bg-color-dark;
+        background: $bg-dark;
       }
 
       &:before {
@@ -79,7 +79,7 @@ body {
   transform: translate3d(- $off-canvas-width, 0, 0);
 
   @include ie() {
-    background-color: $bg-color-white;
+    background-color: $bg-white;
 
     &.is-active {
       left: $off-canvas-width;

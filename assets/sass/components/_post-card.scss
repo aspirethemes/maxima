@@ -6,7 +6,7 @@
   overflow: hidden;
   transform: translateX(0);
   margin-bottom: double($base-spacing-unit);
-  background-color: $bg-color-gray;
+  background-color: $bg-gray;
   border-bottom: 1px solid $color-border;
 
   &__image-link {
@@ -19,7 +19,7 @@
       height: 100%;
       width: 100%;
       content: '';
-      background-color: $bg-color-dark;
+      background-color: $bg-dark;
       transition: $global-transition;
       opacity: 0;
     }
@@ -44,7 +44,7 @@
     display: block;
     padding: $base-spacing-unit 0;
     text-decoration: none;
-    background-color: $bg-color-white;
+    background-color: $bg-white;
 
     &--no-image {
       padding-top: 0;

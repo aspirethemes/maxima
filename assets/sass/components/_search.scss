@@ -11,7 +11,7 @@
   z-index: 100;
   padding-top: double($base-spacing-unit);
 
-  background: $bg-color-white;
+  background: $bg-white;
   transition: all $global-transition ease-in-out;
   transform: translate(0, -100%) scale(0, 0);
 
