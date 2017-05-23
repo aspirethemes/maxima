@@ -34,6 +34,11 @@ $(document).ready(function() {
     $('.js-off-canvas-content, .js-off-canvas-container').toggleClass('is-active');
   });
 
+  $('.js-off-canvas-container__close').click(function(e) {
+    e.preventDefault();
+    $('.js-off-canvas-content, .js-off-canvas-container').toggleClass('is-active');
+  });
+
   // =====================
   // Post Card Images Fade
   // =====================
