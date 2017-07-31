@@ -1,6 +1,6 @@
 {
-  "name": "Maxima",
-  "version": "1.1.1",
+  "name": "maxima",
+  "version": "1.1.2",
   "description": "Minimal Blog & Magazine Ghost Theme",
   "scripts": {
     "postinstall": "bower install"
@@ -10,20 +10,27 @@
     "evil-icons": "^1.8.0",
     "fs": "0.0.2",
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-clean-css": "^2.0.8",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.7.0",
     "gulp-concat": "^2.6.0",
     "gulp-jshint": "^2.0.1",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.4",
-    "gulp-sass": "^2.0.4",
-    "gulp-uglify": "^1.5.1",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0",
     "prismjs": "^1.6.0",
-    "run-sequence": "^1.1.2"
+    "run-sequence": "^2.1.0"
   },
-  "author": "Aspire Themes"
+  "author": {
+    "name": "Aspire Themes",
+    "email": "aspirethemes@gmail.com",
+    "url": "https://aspirethemes.com/"
+  },
+  "config": {
+    "posts_per_page": 16
+  }
 }

@@ -14,15 +14,14 @@
     background-size: cover;
     text-decoration: none;
 
-      @include mq($from: tablet) {
-      opacity: 0;
+    @include mq($from: tablet) {
       transition: opacity $global-transition ease-in-out;
 
-      &.is-inview {
-        opacity: 1;
+      &.js-fadein {
+        opacity: 0;
       }
 
-      @media screen and ( -webkit-min-device-pixel-ratio: 0 ) {
+      &.is-inview {
         opacity: 1;
       }
     }
@@ -33,9 +32,8 @@
       height: 100%;
       width: 100%;
       content: '';
-      opacity: .1;
-      background-color: $bg-dark;
       transition: $global-transition;
+      background: linear-gradient(0deg, rgba($bg-dark, .4) 0, transparent 32%);
     }
 
     &:after {
@@ -59,7 +57,7 @@
 
   &:hover {
     .c-tag-card__image:before {
-      opacity: .2;
+      background-color: rgba($bg-dark, .1);
     }
   }
 }
