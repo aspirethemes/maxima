@@ -2,6 +2,10 @@
   Elements > code & pre
 \*------------------------------------*/
 
+pre {
+  padding: double($base-spacing-unit);
+}
+
 pre,
 code {
   font-family: $font-monospace;
