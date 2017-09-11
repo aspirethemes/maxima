@@ -4,21 +4,11 @@
 
 .c-content {
   a:not(.c-btn) {
-    text-shadow: 0.04545em  0           0 $color-white,
-                 0.09091em  0           0 $color-white,
-                 0.13636em  0           0 $color-white,
-                 -0.04545em 0           0 $color-white,
-                 -0.09091em 0           0 $color-white,
-                 -0.13636em 0           0 $color-white,
-                 0          0.04545em   0 $color-white,
-                 0          0.09091em   0 $color-white,
-                 0          -0.04545em  0 $color-white,
-                 0          -0.09091em  0 $color-white;
+    text-decoration: underline;
+    text-decoration-skip: ink;
 
-    text-decoration: none;
-    background-size: 1px 1px;
-    background-position: 0 99%;
-    background-repeat: repeat-x;
-    background-image: linear-gradient(to bottom, $color-text, $color-text);
+    @include attention() {
+      color: $color-brand;
+    }
   }
 }
