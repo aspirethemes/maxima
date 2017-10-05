@@ -3,6 +3,8 @@
 \*------------------------------------*/
 
 .c-content {
+  word-break: break-all;
+
   a:not(.c-btn) {
     text-decoration: underline;
     text-decoration-skip: ink;

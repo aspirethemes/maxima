@@ -8,6 +8,11 @@ pre {
 
 pre,
 code {
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+
   font-family: $font-monospace;
   font-size: $font-size-medium;
   background-color: $bg-gray;
