@@ -87,7 +87,8 @@
 
   &__excerpt {
     margin-bottom: half($font-size-base);
-    word-break: break-all;
+    word-break: break-word;
+    word-wrap: break-word;
     font-family: $font-sans-serif;
   }
 
