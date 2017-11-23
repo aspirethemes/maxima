@@ -5,4 +5,8 @@
 .c-footer {
   padding: double($base-spacing-unit) 0;
   background-color: $bg-gray-light;
+
+  &__copy {
+    line-height: 1;
+  }
 }

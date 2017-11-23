@@ -10,17 +10,26 @@
   left: 0;
   z-index: 100;
   padding-top: double($base-spacing-unit);
-
   background: $bg-white;
-  transition: all $global-transition ease-in-out;
-  transform: translate(0, -100%) scale(0, 0);
+
+  z-index: -1;
+  opacity: 0;
+  transform: scale(.96);
+  transition: transform half($global-transition) cubic-bezier(.694, 0, .335,  1),
+              opacity   half($global-transition) cubic-bezier(.8,   0, .55, .94),
+              z-index   half($global-transition) step-end;
 
   @include mq($from: tablet) {
     padding-top: quadruple($base-spacing-unit);
   }
 
   &.is-active {
-    transform: translate(0, 0) scale(1, 1);
+    z-index: 10;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform half($global-transition) cubic-bezier(.8, 0, .55, .94),
+                opacity   half($global-transition) cubic-bezier(.8, 0, .55, .94),
+                z-index   half($global-transition) step-start;
   }
 
   &__input {
