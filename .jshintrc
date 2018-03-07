@@ -5,6 +5,7 @@
   "devel": true,
   "multistr": true,
   "globals": {
-    "$": false
+    "$": false,
+    "ghost_blog_url"
    }
 }

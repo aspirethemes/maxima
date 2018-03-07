@@ -44,13 +44,25 @@
   gulp.task('js', function() {
     return gulp.src([
       './bower_components/jquery/dist/jquery.js',
+      './bower_components/jquery.fitvids/jquery.fitvids.js',
       './bower_components/masonry/dist/masonry.pkgd.min.js',
       './bower_components/imagesloaded/imagesloaded.pkgd.min.js',
-      './bower_components/jquery.fitvids/jquery.fitvids.js',
       './bower_components/jQuery-viewport-checker/dist/jquery.viewportchecker.min.js',
       './node_modules/evil-icons/assets/evil-icons.min.js',
       './node_modules/prismjs/prism.js',
-      './assets/js/jquery.ghostHunter.min.js',
+      './node_modules/lunr/lunr.js',
+      './node_modules/lunr-languages/lunr.stemmer.support.js',
+      './node_modules/lunr-languages/lunr.ru.js',
+      './node_modules/lunr-languages/lunr.fr.js',
+      './node_modules/lunr-languages/lunr.de.js',
+      './node_modules/lunr-languages/lunr.es.js',
+      './node_modules/lunr-languages/lunr.pt.js',
+      './node_modules/lunr-languages/lunr.it.js',
+      './node_modules/lunr-languages/lunr.fi.js',
+      './node_modules/lunr-languages/lunr.du.js',
+      './node_modules/lunr-languages/lunr.da.js',
+      './node_modules/lunr-languages/lunr.multi.js',
+      './assets/js/ghosthunter.js',
       './assets/js/app.js'])
       .pipe(jshint())
       .pipe(jshint.reporter('jshint-stylish'))

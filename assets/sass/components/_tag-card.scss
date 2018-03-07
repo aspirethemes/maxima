@@ -13,17 +13,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-decoration: none;
+    transition: opacity $global-transition ease-in-out;
 
-    @include mq($from: tablet) {
-      transition: opacity $global-transition ease-in-out;
+    &.js-fadein {
+      opacity: 0;
+    }
 
-      &.js-fadein {
-        opacity: 0;
-      }
-
-      &.is-inview {
-        opacity: 1;
-      }
+    &.is-inview {
+      opacity: 1;
     }
 
     &:before {
@@ -52,6 +49,7 @@
     margin-bottom: 0;
     padding: $base-spacing-unit;
     font-size: $font-size-base;
+    font-family: $font-sans-serif;
     color: $color-white;
   }
 

@@ -6,11 +6,10 @@ $grid-width: 1200px;
 $grid-gutter: $base-spacing-unit;
 
 .o-grid {
-  display: flex;
-  flex-wrap: wrap;
-
   margin: 0 auto;
   max-width: $grid-width;
+  display: flex;
+  flex-wrap: wrap;
 
   @include clearfix();
 

@@ -1,7 +1,8 @@
 <ul class='c-share o-plain-list'>
   <li class='c-share__item'>
     <a class='c-share__link'
-       title='Share on Twitter'
+       title='{{t "Share on Twitter" }}'
+       aria-label='{{t "Share on Twitter" }}'
        href='https://twitter.com/share?text={{ encode title }}&amp;url={{ url absolute='true' }}'
        onclick="window.open(this.href, 'twitter-share', 'width=550, height=235'); return false;">
       <div data-icon='ei-sc-twitter' data-size='s' class='c-share__icon c-share__icon--twitter'></div>
@@ -10,7 +11,8 @@
 
   <li class='c-share__item'>
     <a class='c-share__link'
-       title='Share on Facebook'
+       title='{{t "Share on Facebook" }}'
+       aria-label='{{t "Share on Facebook" }}'
        href='https://www.facebook.com/sharer/sharer.php?u={{ url absolute='true' }}'
        onclick="window.open(this.href, 'facebook-share', 'width=580, height=296'); return false;">
       <div data-icon='ei-sc-facebook' data-size='s' class='c-share__icon c-share__icon--facebook'></div>
@@ -19,7 +21,8 @@
 
   <li class='c-share__item'>
     <a class='c-share__link'
-       title='Share on Pinterest'
+       title='{{t "Share on Pinterest" }}'
+       aria-label='{{t "Share on Pinterest" }}'
        href='http://pinterest.com/pin/create/button/?url={{ url absolute='true' }}&media={{ @blog.url }}{{ feature_image }}&description={{ encode title }}'
        onclick="window.open(this.href, 'google-share', 'width=580, height=296'); return false;">
       <div data-icon='ei-sc-pinterest' data-size='s' class='c-share__icon c-share__icon--pinterest'></div>

@@ -4,10 +4,14 @@
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 
-  <title>{{ meta_title }}</title>
+  <title>{{meta_title page=(t " (Page %)")}}</title>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
   {{> compiled/inline-css }}
+
+  <script>
+    var ghost_blog_url  = '{{ @blog.url }}';
+  </script>
 
   {{ ghost_head }}
 </head>
@@ -22,10 +26,10 @@
     {{{ body }}}
 
     {{> footer}}
-
-    {{ ghost_foot }}
   </div>
 
   <script src='{{ asset 'js/app.min.js' }}'></script>
+
+  {{ ghost_foot }}
 </body>
 </html>

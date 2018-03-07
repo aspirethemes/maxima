@@ -3,9 +3,6 @@
 \*------------------------------------*/
 
 .c-content {
-  word-break: break-word;
-  word-wrap: break-word;
-
   a:not(.c-btn) {
     text-decoration: underline;
     text-decoration-skip: ink;
@@ -13,5 +10,16 @@
     @include attention() {
       color: $color-brand;
     }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: $font-weight-bold;
+    font-family: $font-sans-serif;
+
   }
 }

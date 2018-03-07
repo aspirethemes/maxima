@@ -22,7 +22,7 @@ $(document).ready(function() {
   // =====================
 
   $('.o-wrapper').fitVids({
-    'customSelector': ['iframe[src*="ted.com"]']
+    'customSelector': ['iframe[src*="ted.com"]', 'iframe[src*="player.twitch.tv"]']
   });
 
   // =====================
@@ -54,13 +54,18 @@ $(document).ready(function() {
   // =====================
 
   var search_field = $('.js-search-input'),
-      search_results = $('.js-search-result'),
+      search_results = $('.js-search-results'),
       toggle_search = $('.js-search-toggle'),
       search_result_template = "\
-        <div class='c-search-result__item'>\
-          <a class='c-search-result__title' href='{{link}}'>{{title}}</a>\
-          <span class='c-search-result__date'>{{pubDate}}</span>\
-        </div>";
+      <a href=" + ghost_blog_url + "{{link}} class='c-search-result'>\
+        <div class='c-search-result__content'>\
+          <h3 class='c-search-result__title'>{{title}}</h3>\
+          <time class='c-search-result__date'>{{pubDate}}</time>\
+        </div>\
+        <div class='c-search-result__media'>\
+          <div class='c-search-result__image is-inview' style='background-image: url({{featureImage}})'></div>\
+        </div>\
+      </a>";
 
   toggle_search.click(function(e) {
     e.preventDefault();
@@ -74,8 +79,8 @@ $(document).ready(function() {
     }, 500);
   });
 
-  $('.c-search, .js-search-close').on('click keyup', function(event) {
-    if (event.target == this || event.target.className == 'js-search-close' || event.keyCode == 27) {
+  $('.c-search, .js-search-close, .js-search-close .icon').on('click keyup', function(event) {
+    if (event.target == this || event.target.className == 'js-search-close' || event.target.className == 'icon' || event.keyCode == 27) {
       $('.c-search').removeClass('is-active');
     }
   });
@@ -83,10 +88,10 @@ $(document).ready(function() {
   search_field.ghostHunter({
     results: search_results,
     onKeyUp         : true,
-    info_template   : "<h4 class='c-search-result__head'>Number of results found: {{amount}}</h4>",
     result_template : search_result_template,
     zeroResultsInfo : false,
     includepages 	: true,
+    displaySearchInfo: false,
     before: function() {
       search_results.fadeIn();
     }
