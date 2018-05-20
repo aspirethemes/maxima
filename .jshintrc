@@ -6,6 +6,6 @@
   "multistr": true,
   "globals": {
     "$": false,
-    "ghost_blog_url"
+    "ghost_blog_url": false
    }
 }
