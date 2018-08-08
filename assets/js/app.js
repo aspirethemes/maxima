@@ -22,7 +22,11 @@ $(document).ready(function() {
   // =====================
 
   $('.o-wrapper').fitVids({
-    'customSelector': ['iframe[src*="ted.com"]', 'iframe[src*="player.twitch.tv"]']
+    'customSelector': [ 'iframe[src*="ted.com"]'          ,
+                        'iframe[src*="player.twitch.tv"]' ,
+                        'iframe[src*="dailymotion.com"]'  ,
+                        'iframe[src*="facebook.com"]'
+                      ]
   });
 
   // =====================
@@ -74,9 +78,19 @@ $(document).ready(function() {
     // If off-canvas is active, just disable it
     $('.js-off-canvas-container').removeClass('is-active');
 
+    // Trigger touchstart for Mobile
+    search_field.trigger('touchstart');
+
     setTimeout(function() {
       search_field.focus();
     }, 500);
+  });
+
+  // Focus and open keyboard for iPhone Mobile Safari
+  // https://stackoverflow.com/a/31043514/558777
+
+  search_field.on('touchstart', function() {
+    $(this).focus();
   });
 
   $('.c-search, .js-search-close, .js-search-close .icon').on('click keyup', function(event) {

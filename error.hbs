@@ -1,0 +1,18 @@
+{{!< default}}
+
+<div class='o-wrapper'>
+
+  <div class='o-grid'>
+    <div class='o-grid__col o-grid__col--full'>
+      <h2>404</h2>
+      <p>{{t 'Page Not Found' }} <a href='{{ @blog.url }}' class='u-right u-font-small'>{{t 'Home Page' }} &#x27A3;</a></p>
+    </div>
+  </div>
+
+  <div class='o-grid js-grid'>
+    {{#get 'posts' limit='6' include='tags, author'}}
+      {{> loop }}
+    {{/get}}
+  </div>
+
+</div>
