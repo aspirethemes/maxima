@@ -28,7 +28,56 @@
 
         <hr>
 
-        {{> author }}
+        {{#primary_author}}
+          <div class='c-author'>
+            {{#if profile_image}}
+              <img class='c-author__img' src='{{ profile_image }}' alt='{{ name }}'>
+            {{/if}}
+
+            <div class='c-author__body'>
+              <h3 class='c-author__name'>
+                <a href='{{ url }}'>{{ name }}</a>
+              </h3>
+
+              {{#if bio}}
+                <p class='c-author__bio'>{{ bio }}</p>
+              {{/if}}
+
+              <ul class='c-author-links o-plain-list'>
+                {{#if twitter}}
+                  <li class='c-author-links__item'>
+                    <a href='{{ twitter_url }}' aria-label='Twitter' target='_blank' rel='noopener'>
+                      <span class='c-author-links__icon' data-icon='ei-sc-twitter' data-size='s'></span>
+                    </a>
+                  </li>
+                {{/if}}
+
+                {{#if facebook}}
+                  <li class='c-author-links__item'>
+                    <a href='{{ facebook_url }}' aria-label='Facebook' target='_blank' rel='noopener'>
+                      <span class='c-author-links__icon' data-icon='ei-sc-facebook' data-size='s'></span>
+                    </a>
+                  </li>
+                {{/if}}
+
+                {{#if website}}
+                  <li class='c-author-links__item'>
+                    <a href='{{ website }}' aria-label='Website' target='_blank' rel='noopener'>
+                      <span class='c-author-links__icon' data-icon='ei-link' data-size='s'></span>
+                    </a>
+                  </li>
+                {{/if}}
+
+                {{#if location}}
+                  <li class='c-author-links__item' aria-label='Location' target='_blank' rel='noopener'>
+                    <span class='c-author-links__icon' data-icon='ei-location' data-size='s'></span>{{ location }}
+                  </li>
+                {{/if}}
+              </ul>
+            </div>
+
+          </div>
+        {{/primary_author}}
 
         {{#if @labs.subscribers }}
           {{> subscribe-form }}
