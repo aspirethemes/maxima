@@ -74,7 +74,7 @@ $(document).ready(function() {
       search_results = $('.js-search-results'),
       toggle_search = $('.js-search-toggle'),
       search_result_template = "\
-      <a href=" + ghost_blog_url + "{{link}} class='c-search-result'>\
+      <a href={{link}} class='c-search-result'>\
         <div class='c-search-result__content'>\
           <h3 class='c-search-result__title'>{{title}}</h3>\
           <time class='c-search-result__date'>{{pubDate}}</time>\
