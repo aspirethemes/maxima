@@ -3,7 +3,7 @@
     <div class='o-grid__col o-grid__col--full'>
 
       <ul class='o-plain-list c-social-nav u-text-center'>
-        {{# if @blog.twitter}}
+        {{# if @site.twitter}}
           <li class='c-social-nav__item'>
             <a href='{{ twitter_url }}' aria-label='Twitter' target='_blank' rel='noopener'>
               <span class='c-social-nav__icon' data-icon='ei-sc-twitter' data-size='s'></span>
@@ -11,7 +11,7 @@
           </li>
         {{/if}}
 
-        {{# if @blog.facebook}}
+        {{# if @site.facebook}}
           <li class='c-social-nav__item'>
             <a href='{{ facebook_url }}' aria-label='Facebook' target='_blank' rel='noopener'>
               <span class='c-social-nav__icon' data-icon='ei-sc-facebook' data-size='s'></span>
@@ -34,7 +34,7 @@
 
       <div class='u-text-center c-footer__copy'>
         <span class='u-font-small u-font-sans-serif'>
-          &copy; {{ date format='YYYY' }} {{ @blog.title }} - {{{t "Published with {ghostlink}" ghostlink="<a href=\"https://ghost.org\">Ghost</a>" }}}
+          &copy; {{ date format='YYYY' }} {{ @site.title }} - {{{t "Published with {ghostlink}" ghostlink="<a href=\"https://ghost.org\">Ghost</a>" }}}
         </span>
       </div>
 

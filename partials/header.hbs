@@ -13,12 +13,12 @@
 
           <div class='o-grid__col o-grid__col--2-4-s'>
             <div class='c-logo u-text-center'>
-              {{#if @blog.logo}}
-                <a href='{{ @blog.url }}'>
-                  <img class='c-logo__img' src='{{ @blog.logo }}' alt='{{ @blog.title }}'>
+              {{#if @site.logo}}
+                <a href='{{ @site.url }}'>
+                  <img class='c-logo__img' src='{{ @site.logo }}' alt='{{ @site.title }}'>
                 </a>
               {{else}}
-                <a class='c-logo__link' href='{{ @blog.url }}'>{{ @blog.title }}</a>
+                <a class='c-logo__link' href='{{ @site.url }}'>{{ @site.title }}</a>
               {{/if}}
             </div>
           </div>
@@ -38,8 +38,8 @@
                 {{ navigation }}
               </ul>
 
-              {{#if @blog.description}}
-                <p class='c-blog-desc'>{{@blog.description}}</p>
+              {{#if @site.description}}
+                <p class='c-blog-desc'>{{@site.description}}</p>
               {{/if}}
             </div>
           </div>
