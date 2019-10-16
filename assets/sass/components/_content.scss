@@ -49,21 +49,17 @@
   min-width: 100%;
 }
 
-.kg-embed-card,
-.kg-image-card,
-.kg-gallery-card, {
-  figcaption {
-    width: 100%;
-    text-align: center;
-    color: $color-gray;
-    font-size: $font-size-small;
-    font-family: $font-sans-serif;
-    line-height: $line-height-small;
-    font-weight: $font-weight-regular;
-    margin-top: half($base-spacing-unit) + half(quarter($base-spacing-unit));
-    padding-left: half($base-spacing-unit) + half(quarter($base-spacing-unit));
-    padding-right: half($base-spacing-unit) + half(quarter($base-spacing-unit));
-  }
+.kg-card figcaption {
+  width: 100%;
+  text-align: center;
+  color: $color-gray;
+  font-size: $font-size-small;
+  font-family: $font-sans-serif;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-small;
+  margin-top: half($base-spacing-unit) + half(quarter($base-spacing-unit));
+  padding-left: half($base-spacing-unit) + half(quarter($base-spacing-unit));
+  padding-right: half($base-spacing-unit) + half(quarter($base-spacing-unit));
 }
 
 .kg-width-full .kg-image {
