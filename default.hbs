@@ -9,6 +9,10 @@
 
   {{> compiled/inline-css }}
 
+  <script>
+    var site_url = '{{ @site.url }}';
+  </script>
+
   {{ ghost_head }}
 </head>
 <body class='{{ body_class }}'>

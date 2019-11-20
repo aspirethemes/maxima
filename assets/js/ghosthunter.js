@@ -1,5 +1,5 @@
 /**
-  * ghostHunter - 0.4.0
+  * ghostHunter - This is an edited version of the plugin made by Aspire Themes
   * Copyright (C) 2014 Jamal Neufeld (jamal@i11u.me)
   * MIT Licensed
   * @license
@@ -22,7 +22,7 @@
 
 	$.fn.ghostHunter.defaults = {
 		resultsData			: false,
-		onPageLoad			: true,
+		onPageLoad			: false,
 		onKeyUp				: false,
 		result_template 	: "<a href='{{link}}'><p><h2>{{title}}</h2><h4>{{prettyPubDate}}</h4></p></a>",
 		info_template		: "<p>Number of posts found: {{amount}}</p>",
@@ -30,7 +30,6 @@
 		zeroResultsInfo		: true,
 		before				: false,
 		onComplete			: false,
-		includepages		: false,
 		filterfields		: false
   };
 
@@ -53,19 +52,16 @@
 			this.displaySearchInfo	= opts.displaySearchInfo;
 			this.before				= opts.before;
 			this.onComplete			= opts.onComplete;
-			this.includepages		= opts.includepages;
 			this.filterfields		= opts.filterfields;
 
-			//This is where we'll build the index for later searching. It's not a big deal to build it on every load as it takes almost no space without data
+			// This is where we'll build the index for later searching. It's not a big deal to build it on every load as it takes almost no space without data
 			this.index = lunr(function () {
         this.use(lunr.multiLanguage('en', 'ru', 'fr', 'de', 'es', 'pt', 'it', 'fi', 'du', 'da'))
-				this.field('title', {boost: 10})
-				this.field('description')
+        this.ref('id')
+        this.field('title', {boost: 10})
+        this.field('plaintext', {boost: 5})
+        this.field('pubDate')
 				this.field('link')
-				this.field('plaintext', {boost: 5})
-				this.field('pubDate')
-				this.field('tag')
-				this.ref('id')
 			});
 
 			if ( opts.onPageLoad ) {
@@ -103,31 +99,25 @@
 			var index = this.index,
         blogData = this.blogData;
 
-      var url = "/ghost/api/v2/content/posts/?key=" + search_api_key + "&limit=all&formats=plaintext";
-
-      // TODO, add pages to the query
-      if ( this.includepages ) {
-        // url += "&filter=page:true"
-      }
+        var url = site_url + "/ghost/api/v3/content/posts/?key=" + search_api_key + "&limit=all&fields=id,title,url,created_at,feature_image&formats=plaintext";
 
       $.get(url).done(function(data) {
-				searchData = data.posts;
+        searchData = data.posts;
 				searchData.forEach(function(arrayItem) {
 					var parsedData 	= {
 						id: String(arrayItem.id),
-						title: String(arrayItem.title),
-						description: String(arrayItem.meta_description),
-						plaintext: String(arrayItem.plaintext),
+            title: String(arrayItem.title),
+            plaintext: String(arrayItem.plaintext),
             pubDate: String(arrayItem.created_at),
-            featureImage: String(arrayItem.feature_image),
-						link: String(arrayItem.url)
+            link: String(arrayItem.url),
+            featureImage: String(arrayItem.feature_image)
 					}
 
 					parsedData.prettyPubDate = prettyDate(parsedData.pubDate);
 					var tempdate = prettyDate(parsedData.pubDate);
 
 					index.add(parsedData)
-					blogData[arrayItem.id] = {title: arrayItem.title, description: arrayItem.meta_description, pubDate: tempdate, link: arrayItem.url, featureImage: arrayItem.feature_image};
+					blogData[arrayItem.id] = {title: arrayItem.title, pubDate: tempdate, link: arrayItem.url, featureImage: arrayItem.feature_image};
 				});
       });
 			this.isInit = true;
