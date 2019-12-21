@@ -1,6 +1,6 @@
 {
   "name": "maxima",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
