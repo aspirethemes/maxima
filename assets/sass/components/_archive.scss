@@ -1,12 +1,10 @@
 /*------------------------------------*\
-  Components > Tag
+  Components > Archive
 \*------------------------------------*/
 
-.c-tag {
+.c-archive {
   text-align: center;
-  padding-bottom: double($base-spacing-unit);
   margin-bottom: double($base-spacing-unit);
-  border-bottom: 1px solid $color-border;
 
   &__name {
     margin-bottom: 0;

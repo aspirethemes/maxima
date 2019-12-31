@@ -12,7 +12,6 @@ code {
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
-
   font-family: $font-monospace;
   font-size: $font-size-medium;
   background-color: $bg-gray;
@@ -24,7 +23,8 @@ p code { padding: half(quarter($line-height-medium)) quarter($line-height-medium
 
 pre[class*='language-'] {
   padding: double($base-spacing-unit);
-  margin: $base-spacing-unit 0;
+  margin-bottom: 0;
+  margin-top: double($base-spacing-unit);
 }
 
 code[class*='language-'],

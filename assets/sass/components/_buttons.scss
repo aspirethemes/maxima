@@ -8,17 +8,15 @@ $btn-bg-hover: #238cf6;
 .c-btn {
   display: inline-block;
   padding: half($base-spacing-unit) double($base-spacing-unit);
-
+  white-space: nowrap;
   cursor: pointer;
   transition: $global-transition;
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
   line-height: inherit;
-
   border: 0;
   border-radius: 0;
-
   color: $color-white;
   background-color: $btn-bg;
   font-size: $font-size-medium;
@@ -35,5 +33,30 @@ $btn-bg-hover: #238cf6;
 
   &--small {
     padding: quarter($base-spacing-unit) $base-spacing-unit;
+  }
+
+  &.loading {
+    position: relative;
+    padding-right: $line-height-base + quarter($line-height-base);
+
+    @-webkit-keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    &:after {
+      position: absolute;
+      top: 16px;
+      right: 14px;
+      content: '';
+      display: block;
+      height: half($line-height-base);
+      width: half($line-height-base);
+      border: 2px solid $color-white;
+      border-radius: 100%;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      animation: spin 500ms infinite linear;
+    }
   }
 }

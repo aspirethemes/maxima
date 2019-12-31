@@ -18,6 +18,7 @@
     margin-right: $base-spacing-unit;
     height: quadruple($base-spacing-unit);
     width: quadruple($base-spacing-unit);
+    border: 4px solid $color-border;
 
     @include mq($from: desktop) {
       margin-right: double($base-spacing-unit);
@@ -34,20 +35,16 @@
 
   &__name {
     margin-bottom: half($base-spacing-unit);
-    font-family: $font-sans-serif;
   }
 
   &__bio {
     margin-bottom: half($base-spacing-unit);
     font-size: $font-size-medium;
-    font-family: $font-sans-serif;
     line-height: $line-height-medium;
   }
 }
 
 .c-author-links {
-  font-family: $font-sans-serif;
-
   &__item {
     display: inline-block;
     font-size: $font-size-medium;

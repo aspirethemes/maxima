@@ -6,7 +6,12 @@
   margin: 0 auto;
   max-width: 700px;
 
+  > * + * {
+    margin-top: double($base-spacing-unit);
+  }
+
   &__title {
+    font-family: $font-serif;
     font-size: double($font-size-tiny);
 
     @include mq($from: tablet) {
@@ -20,9 +25,9 @@
     padding-top: $base-spacing-unit;
     display: block;
     text-align: center;
+    margin-top: $base-spacing-unit;
     margin-bottom: $base-spacing-unit;
     font-size: $font-size-small;
-    font-family: $font-sans-serif;
     line-height: $line-height-small;
     text-transform: uppercase;
     color: $color-gray;
@@ -40,6 +45,6 @@
   }
 
   &__image {
-    margin: 0 auto $base-spacing-unit;
+    margin: 0 auto;
   }
 }

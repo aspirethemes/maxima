@@ -69,7 +69,6 @@
     display: block;
     margin-bottom: quarter($line-height-base);
     font-size: $font-size-tiny;
-    font-family: $font-sans-serif;
     line-height: $line-height-small;
     text-transform: uppercase;
     color: $color-gray;
@@ -89,7 +88,6 @@
     margin-bottom: half($font-size-base);
     word-break: break-word;
     word-wrap: break-word;
-    font-family: $font-sans-serif;
   }
 
   &__featured-icon {

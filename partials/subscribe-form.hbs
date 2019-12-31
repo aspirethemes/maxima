@@ -1,7 +1,15 @@
-<h5 class='u-text-center'>{{t 'Enter your email below to join our newsletter' }}</h5>
 
-{{  subscribe_form
-    form_class='c-subscribe'
-    placeholder='Your email address'
-    button_class='c-subscribe__btn c-btn'
-}}
+
+<div class="subscribe-form">
+  <h5 class='u-text-center u-font-bold '>{{t 'Enter your email below to join our newsletter' }}</h5>
+  <form data-members-form='subscribe' class='subscribe-form u-mt-16'>
+    <div class='form-group'>
+      <input type='email' placeholder='{{t 'Email ' }}' data-members-email autocomplete='false'>
+      <button type='submit' class='c-btn'>{{t 'Subscribe' }}</button>
+    </div>
+
+    <div class='u-alert u-alert--success u-mt-8'>{{t 'Please check your inbox and click the link to confirm your subscription.' }}</div>
+    <div class='u-alert u-alert--invalid u-mt-8'>{{t 'Please enter a valid email address!' }}</div>
+    <div class='u-alert u-alert--error u-mt-8'>{{t 'An error occurred, please try again later.' }}</div>
+  </form>
+</div>

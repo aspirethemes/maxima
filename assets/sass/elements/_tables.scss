@@ -10,17 +10,11 @@ table {
   td {
     padding: $base-spacing-unit;
     text-align: left;
-    vertical-align: top;
     border-top: 1px solid $color-border;
-    font-weight: $font-weight-regular;
   }
 
   thead th {
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
-    font-size: $font-size-small;
-    vertical-align: bottom;
-    border-bottom: 2px solid $color-border;
+    white-space: nowrap;
   }
 
   tbody + tbody {

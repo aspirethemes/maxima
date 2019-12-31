@@ -168,6 +168,7 @@
   &__title {
     margin-bottom: half($base-spacing-unit);
     font-size: $font-size-small;
+    font-weight: $font-weight-bold;
   }
 
   &__date {
@@ -175,7 +176,6 @@
     font-size: $font-size-tiny;
     color: $color-gray;
     text-transform: uppercase;
-    font-family: $font-sans-serif;
     letter-spacing: $global-letter-spacing;
   }
 }

@@ -1,6 +1,7 @@
 {
   "name": "maxima",
-  "version": "1.2.6",
+  "description": "Minimal Blog & Magazine Ghost Theme",
+  "version": "1.2.7",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
@@ -8,7 +9,6 @@
   "keywords": [
     "ghost-theme"
   ],
-  "description": "Minimal Blog & Magazine Ghost Theme",
   "scripts": {
     "postinstall": "bower install"
   },
@@ -29,6 +29,7 @@
     "jshint-stylish": "^2.2.0",
     "lunr": "^0.7.0",
     "lunr-languages": "^1.0.0",
+    "normalize.css": "^8.0.1",
     "prismjs": "^1.8.1"
   },
   "author": {

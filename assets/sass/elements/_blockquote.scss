@@ -4,6 +4,9 @@
 
 blockquote {
   padding-left: $base-spacing-unit;
-  border-left: 3px solid $color-text;
+  border-left: 4px solid $color-text;
   font-style: italic;
+  font-size: $font-size-h3;
+  line-height: 1.5;
+  font-weight: $font-weight-bold;
 }

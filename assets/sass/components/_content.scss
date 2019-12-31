@@ -6,14 +6,36 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  hyphens: auto;
 
-  a:not(.c-btn) {
+  > * + * {
+    margin-top: double($base-spacing-unit);
+  }
+
+  h1 + *,
+  h2 + *,
+  h3 + *,
+  h4 + * {
+    margin-top: half($base-spacing-unit);
+  }
+
+  a {
     text-decoration: underline;
-    text-decoration-skip: ink;
 
     @include attention() {
       color: $color-brand;
     }
+  }
+
+  hr {
+    margin-bottom: 0;
+  }
+
+  p, pre,
+  dl, ol, ul,
+  form,
+  fieldset {
+    font-family: $font-serif;
   }
 
   h1,
@@ -23,7 +45,6 @@
   h5,
   h6 {
     font-weight: $font-weight-bold;
-    font-family: $font-sans-serif;
   }
 
   address,
@@ -54,7 +75,6 @@
   text-align: center;
   color: $color-gray;
   font-size: $font-size-small;
-  font-family: $font-sans-serif;
   font-weight: $font-weight-regular;
   line-height: $line-height-small;
   margin-top: half($base-spacing-unit) + half(quarter($base-spacing-unit));

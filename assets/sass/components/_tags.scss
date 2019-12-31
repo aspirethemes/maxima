@@ -9,9 +9,7 @@
     margin: 0 half($base-spacing-unit) quarter($base-spacing-unit) 0;
 
     font-size: $font-size-tiny;
-    font-family: $font-sans-serif;
     line-height: $line-height-small;
-
     background-color: $bg-gray-light;
 
     @include attention() {

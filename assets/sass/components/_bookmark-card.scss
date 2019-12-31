@@ -12,7 +12,6 @@ a.kg-bookmark-container {
   line-height: 1.5;
   border-bottom: 0;
   color: $color-text;
-  font-family: $font-sans-serif;
   transition: $global-transition;
   background-color: $bg-gray;
   font-weight: $font-weight-regular;
@@ -39,7 +38,7 @@ a.kg-bookmark-container {
 
 .kg-bookmark-title {
   font-size: $font-size-medium;
-  font-weight: $font-weight-regular;
+  font-weight: $font-weight-bold;
 }
 
 .kg-bookmark-description {
