@@ -5,7 +5,7 @@
       <ul class='o-plain-list c-social-nav u-text-center'>
         {{# if @site.twitter}}
           <li class='c-social-nav__item'>
-            <a href='{{ twitter_url }}' aria-label='Twitter' target='_blank' rel='noopener'>
+            <a href='{{ twitter_url }}' aria-label='Twitter' target='_blank' rel='noopener noreferrer'>
               <span class='c-social-nav__icon' data-icon='ei-sc-twitter' data-size='s'></span>
             </a>
           </li>
@@ -13,28 +13,29 @@
 
         {{# if @site.facebook}}
           <li class='c-social-nav__item'>
-            <a href='{{ facebook_url }}' aria-label='Facebook' target='_blank' rel='noopener'>
+            <a href='{{ facebook_url }}' aria-label='Facebook' target='_blank' rel='noopener noreferrer'>
               <span class='c-social-nav__icon' data-icon='ei-sc-facebook' data-size='s'></span>
             </a>
           </li>
         {{/if}}
 
         <li class='c-social-nav__item'>
-          <a href='#' target='_blank' aria-label='Instagram' target='_blank' rel='noopener'>
+          <a href='#' target='_blank' aria-label='Instagram' target='_blank' rel='noopener noreferrer'>
             <span class='c-social-nav__icon' data-icon='ei-sc-instagram' data-size='s'></span>
           </a>
         </li>
 
         <li class='c-social-nav__item'>
-          <a href='#' aria-label='Pinterest' target='_blank' rel='noopener'>
+          <a href='#' aria-label='Pinterest' target='_blank' rel='noopener noreferrer'>
             <span class='c-social-nav__icon' data-icon='ei-sc-pinterest' data-size='s'></span>
           </a>
         </li>
       </ul>
 
       <div class='u-text-center c-footer__copy'>
-        <span class='u-font-small'>
-          &copy; {{ date format='YYYY' }} {{ @site.title }} - {{{t "Published with {ghostlink}" ghostlink="<a href=\"https://ghost.org\">Ghost</a>" }}}
+        <span class='u-font-tiny'>
+          &copy; {{ date format='YYYY' }} {{ @site.title }} &ndash;
+          {{{t 'Published with {ghostLink} & {themeLink}' ghostLink='<a href=\'https://ghost.org\'>Ghost</a>' themeLink='<a href=\'https://aspirethemes.com/themes/maxima\'>Maxima</a>' }}}
         </span>
       </div>
 

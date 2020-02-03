@@ -14,6 +14,7 @@
       plumber      = require('gulp-plumber'),
       gutil        = require('gulp-util'),
       replace      = require('gulp-replace'),
+      zip          = require('gulp-zip'),
       fs           = require('fs');
 
   // Set the compiler to use Dart Sass instead of Node Sass
@@ -51,6 +52,8 @@
       './bower_components/jquery.fitvids/jquery.fitvids.js',
       './bower_components/masonry/dist/masonry.pkgd.min.js',
       './bower_components/imagesloaded/imagesloaded.pkgd.min.js',
+      './bower_components/bootstrap-transition/scripts/transition.js',
+      './bower_components/zoom.js/dist/zoom.js',
       './bower_components/jQuery-viewport-checker/dist/jquery.viewportchecker.min.js',
       './node_modules/evil-icons/assets/evil-icons.min.js',
       './node_modules/prismjs/prism.js',
@@ -92,6 +95,19 @@
     'build',
     gulp.series('build_css', 'js')
   );
+
+  gulp.task('zip', function () {
+    return gulp.src([
+      './**',
+      '!node_modules/**',
+      '!bower_components/**',
+      '!.git/**',
+      '!.DS_Store'
+      ])
+    .pipe(zip('maxima.zip'))
+    .pipe(gulp.dest('../'))
+    done();
+  });
 
   gulp.task(
     'default',

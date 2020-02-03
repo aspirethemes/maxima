@@ -15,7 +15,7 @@
   "Search {blogtitle}": "Søg {blogtitle}",
   "Type to Search": "Skriv til Søg",
 
-  "Published with {ghostlink}": "Udgivet med {ghostlink}",
+  "Published with {ghostLink} & {themeLink}": "Udgivet med {ghostLink} & {themeLink}",
 
   "Email": "E-mail",
   "Log In": "Log ind",

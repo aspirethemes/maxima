@@ -2,9 +2,6 @@
   Components > Buttons
 \*------------------------------------*/
 
-$btn-bg:       #207cdf;
-$btn-bg-hover: #238cf6;
-
 .c-btn {
   display: inline-block;
   padding: half($base-spacing-unit) double($base-spacing-unit);
@@ -18,13 +15,13 @@ $btn-bg-hover: #238cf6;
   border: 0;
   border-radius: 0;
   color: $color-white;
-  background-color: $btn-bg;
+  background-color: $color-brand;
   font-size: $font-size-medium;
   font-family: $font-sans-serif;
 
   @include attention() {
+    opacity: .9;
     text-decoration: none;
-    background-color: $btn-bg-hover;
   }
 
   &--full {

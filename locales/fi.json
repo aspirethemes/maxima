@@ -16,7 +16,7 @@
   "Search {blogtitle}": "Hae {blogtitle}",
   "Type to Search": "kirjoita hakua",
 
-  "Published with {ghostlink}": "Julkaistu {ghostlink}",
+  "Published with {ghostLink} & {themeLink}": "Julkaistu {ghostLink} & {themeLink}",
 
   "Email": "Sähköposti",
   "Log In": "Kirjaudu sisään",

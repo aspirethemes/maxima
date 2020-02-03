@@ -88,7 +88,6 @@ body {
 }
 
 .c-off-canvas-container {
-  -webkit-perspective: 1000;
   transition: transform $global-transition cubic-bezier(.16, .68, .43, .99);
 
   &.is-active {

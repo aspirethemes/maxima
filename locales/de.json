@@ -15,7 +15,7 @@
   "Search {blogtitle}": "Suche {blogtitle}",
   "Type to Search": "Tippe um zu suchen",
 
-  "Published with {ghostlink}": "Veröffentlicht mit {ghostlink}",
+  "Published with {ghostLink} & {themeLink}": "Veröffentlicht mit {ghostLink} & {themeLink}",
 
   "Email": "E-Mail",
   "Log In": "Einloggen",

@@ -15,7 +15,7 @@
   "Search {blogtitle}": "Zoeken {blogtitle}",
   "Type to Search": "Type om te zoeken",
 
-  "Published with {ghostlink}": "Gepubliceerd met {ghostlink}",
+  "Published with {ghostLink} & {themeLink}": "Gepubliceerd met {ghostLink} & {themeLink}",
 
   "Email": "E-mail",
   "Log In": "Aanmelden",

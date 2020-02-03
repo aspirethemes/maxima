@@ -36,7 +36,7 @@
 	var prettyDate = function(date) {
 		var d = new Date(date);
 		var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-		return d.getDate() + '.' + monthNames[d.getMonth()].substr(0, 3) + '.' + d.getFullYear();
+		return d.getDate() + ' ' + monthNames[d.getMonth()].substr(0, 3) + ' ' + d.getFullYear();
 	};
 
 	var pluginMethods	= {

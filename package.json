@@ -1,7 +1,7 @@
 {
   "name": "maxima",
   "description": "Minimal Blog & Magazine Ghost Theme",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
@@ -44,6 +44,7 @@
     "dart-sass": "^1.17.0",
     "gulp": "^4.0.0",
     "gulp-sass": "^3.2.1",
+    "gulp-zip": "^5.0.2",
     "node-sass": "^4.11.0"
   }
 }

@@ -1,10 +1,9 @@
-
-
 <div class="subscribe-form">
   <h5 class='u-text-center u-font-bold '>{{t 'Enter your email below to join our newsletter' }}</h5>
   <form data-members-form='subscribe' class='subscribe-form u-mt-16'>
     <div class='form-group'>
-      <input type='email' placeholder='{{t 'Email ' }}' data-members-email autocomplete='false'>
+      <label for='subscribe-email' class='u-hidden-visually'>{{t 'Email' }}</label>
+      <input type='email' id='subscribe-email' placeholder='{{t 'Email' }}' data-members-email>
       <button type='submit' class='c-btn'>{{t 'Subscribe' }}</button>
     </div>
 

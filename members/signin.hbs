@@ -20,7 +20,8 @@
         <div class="box box--news-letter subscribe-form">
           <form data-members-form='signin' class='subscribe-form'>
             <div class='form-group'>
-              <input type='email' placeholder='{{t 'Email ' }}' data-members-email autocomplete='false'>
+              <label for='subscribe-email-signin' class='u-hidden-visually'>{{t 'Email' }}</label>
+              <input type='email' id='subscribe-email-signin' placeholder='{{t 'Email' }}' data-members-email>
               <button type='submit' class='c-btn'>{{t 'Send login link' }}</button>
             </div>
 

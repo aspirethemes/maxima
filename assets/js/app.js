@@ -3,6 +3,43 @@ $(document).ready(function() {
   'use strict';
 
   // =====================
+  // Responsive layout
+  // =====================
+
+  // Init Masonry
+  var $masonry_grid = $('.js-grid').masonry({
+    itemSelector: '.js-grid__col',
+    percentPosition: true
+  });
+
+  // Layout Masonry after each image loads
+  $masonry_grid.imagesLoaded().progress(function() {
+    $masonry_grid.masonry('layout');
+  });
+
+  // =====================
+  // Koenig Gallery
+  // =====================
+  var gallery_images = document.querySelectorAll('.kg-gallery-image img');
+
+  gallery_images.forEach(function (image) {
+    var container = image.closest('.kg-gallery-image');
+    var width = image.attributes.width.value;
+    var height = image.attributes.height.value;
+    var ratio = width / height;
+    container.style.flex = ratio + ' 1 0%';
+  });
+
+  // =====================
+  // Images zoom
+  // =====================
+
+  $('.c-content img').attr('data-action', 'zoom');
+
+  // If the image is inside a link, remove zoom
+  $('.c-content a img').removeAttr('data-action');
+
+  // =====================
   // Members subscription
   // =====================
 
@@ -22,64 +59,36 @@ $(document).ready(function() {
   var stripe = getParameterByName('stripe');
 
   $(document).ready(function () {
-      if (action == 'subscribe') {
-        $('body').addClass('subscribe-success');
+    if (action == 'subscribe') {
+      $('body').addClass('subscribe-success');
+    }
+
+    if (action == 'signup') {
+      window.location = '/signup/?action=checkout';
+    }
+
+    if (action == 'checkout') {
+      $('body').addClass('signup-success');
+    }
+
+    if (action == 'signin') {
+      $('body').addClass('signin-success');
+    }
+
+    if (stripe == 'success') {
+      $('body').addClass('checkout-success');
+    }
+
+    $('.c-notification__close').click(function () {
+      var uri = window.location.toString();
+
+      $(this).parent().addClass('closed');
+
+      if (uri.indexOf('?') > 0) {
+        var clean_uri = uri.substring(0, uri.indexOf('?'));
+        window.history.replaceState({}, document.title, clean_uri);
       }
-
-      if (action == 'signup') {
-        window.location = '/signup/?action=checkout';
-      }
-
-      if (action == 'checkout') {
-        $('body').addClass('signup-success');
-      }
-
-      if (action == 'signin') {
-        $('body').addClass('signin-success');
-      }
-
-      if (stripe == 'success') {
-        $('body').addClass('checkout-success');
-      }
-
-      $('.c-notification__close').click(function () {
-        var uri = window.location.toString();
-
-        $(this).parent().addClass('closed');
-
-        if (uri.indexOf('?') > 0) {
-          var clean_uri = uri.substring(0, uri.indexOf('?'));
-          window.history.replaceState({}, document.title, clean_uri);
-        }
-      });
-  });
-
-  // =====================
-  // Koenig Gallery
-  // =====================
-  var gallery_images = document.querySelectorAll('.kg-gallery-image img');
-
-  gallery_images.forEach(function (image) {
-    var container = image.closest('.kg-gallery-image');
-    var width = image.attributes.width.value;
-    var height = image.attributes.height.value;
-    var ratio = width / height;
-    container.style.flex = ratio + ' 1 0%';
-  });
-
-  // =====================
-  // Responsive layout
-  // =====================
-
-  // Init Masonry
-  var $masonry_grid = $('.js-grid').masonry({
-    itemSelector: '.js-grid__col',
-    percentPosition: true
-  });
-
-  // Layout Masonry after each image loads
-  $masonry_grid.imagesLoaded().progress(function() {
-    $masonry_grid.masonry('layout');
+    });
   });
 
   // =====================
