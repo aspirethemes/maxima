@@ -1,7 +1,7 @@
 {
   "name": "maxima",
   "description": "Minimal Blog & Magazine Ghost Theme",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"

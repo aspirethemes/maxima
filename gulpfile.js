@@ -103,7 +103,7 @@
       '!bower_components/**',
       '!.git/**',
       '!.DS_Store'
-      ])
+    ], { dot: true })
     .pipe(zip('maxima.zip'))
     .pipe(gulp.dest('../'))
     done();

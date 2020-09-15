@@ -8,15 +8,12 @@
   flex-direction: column;
   hyphens: auto;
 
-  > * + * {
-    margin-top: double($base-spacing-unit);
+  > * {
+    min-width: 100%;
   }
 
-  h1 + *,
-  h2 + *,
-  h3 + *,
-  h4 + * {
-    margin-top: half($base-spacing-unit);
+  > * + * {
+    margin-top: double($base-spacing-unit);
   }
 
   a {
@@ -38,26 +35,12 @@
     font-family: $font-serif;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-weight: $font-weight-bold;
-  }
 
-  address,
-  h1, h2, h3, h4, h5, h6,
-  blockquote, p, pre,
-  dl, ol, ul,
-  hr,
-  form,
-  table,
-  fieldset,
-  .footnotes,
-  .cp_embed_wrapper {
-    min-width: 100%;
+    + * {
+      margin-top: half($base-spacing-unit);
+    }
   }
 }
 
@@ -71,7 +54,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  min-width: 100%;
+
+  > * {
+    width: 100%;
+  }
 }
 
 .kg-card figcaption {
