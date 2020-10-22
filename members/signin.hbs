@@ -25,13 +25,13 @@
               <button type='submit' class='c-btn'>{{t 'Send login link' }}</button>
             </div>
 
-            <div class='u-alert u-alert--success u-mt-8'>{{t 'Please check your inbox and click the link to confirm your subscription.' }}</div>
+            <div class='u-alert u-alert--success u-mt-8'>{{t 'Please check your inbox and click the link to complete the login.' }}</div>
             <div class='u-alert u-alert--invalid u-mt-8'>{{t 'Please enter a valid email address!' }}</div>
             <div class='u-alert u-alert--error u-mt-8'>{{t 'An error occurred, please try again later.' }}</div>
           </form>
         </div>
 
-        <p class='u-font-small u-mt-8'>{{t "Don't have an account yet?"}} <a href='/signup/' class='u-link'>{{t 'Sign Up'}}</a></p>
+        <p class='u-font-small u-mt-8'>{{t "Don't have an account yet?"}} <a href='{{ @site.url }}/signup/' class='u-link'>{{t 'Subscribe'}}</a></p>
       </div>
     </div>
   {{/if}}

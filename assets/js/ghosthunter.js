@@ -56,7 +56,7 @@
 
 			// This is where we'll build the index for later searching. It's not a big deal to build it on every load as it takes almost no space without data
 			this.index = lunr(function () {
-        this.use(lunr.multiLanguage('en', 'ru', 'fr', 'de', 'es', 'pt', 'it', 'fi', 'du', 'da'))
+        this.use(lunr.multiLanguage('en', 'ru', 'fr', 'de', 'es', 'pt', 'it', 'fi', 'nl', 'da'))
         this.ref('id')
         this.field('title', {boost: 10})
         this.field('plaintext', {boost: 5})
@@ -99,7 +99,7 @@
 			var index = this.index,
         blogData = this.blogData;
 
-        var url = site_url + "/ghost/api/v3/content/posts/?key=" + search_api_key + "&limit=all&fields=id,title,url,created_at,feature_image&formats=plaintext";
+        var url = site_url + "/ghost/api/v4/content/posts/?key=" + search_api_key + "&limit=all&fields=id,title,url,created_at,feature_image&formats=plaintext";
 
       $.get(url).done(function(data) {
         searchData = data.posts;

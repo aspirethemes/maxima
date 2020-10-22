@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang='{{ @site.lang }}'>
+<html lang='{{ @site.locale }}'>
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -16,10 +16,7 @@
   {{ ghost_head }}
 </head>
 <body class='{{ body_class }}'>
-  {{> notifications }}
-
   <div class='js-off-canvas-container c-off-canvas-container'>
-
     <span class='js-off-canvas-container__close c-off-canvas-container__close'></span>
 
     {{> header }}
@@ -30,7 +27,6 @@
   </div>
 
   <script src='{{ asset 'js/app.min.js' }}'></script>
-
   {{ ghost_foot }}
 </body>
 </html>

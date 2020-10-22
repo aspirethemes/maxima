@@ -42,6 +42,12 @@
       margin-top: half($base-spacing-unit);
     }
   }
+
+  // Hide Ghost built-in upgrade call to action box
+  .gh-post-upgrade-cta {
+    display: none;
+    visibility: hidden
+  }
 }
 
 // Koenig Editor

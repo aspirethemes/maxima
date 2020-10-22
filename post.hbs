@@ -10,12 +10,12 @@
         <h1 class='c-post__title u-text-center'>{{ title }}</h1>
         <time class='c-post__date' datetime='{{ date format='YYYY-MM-DD' }}'>{{ date format='DD MMM YYYY' }}</time>
 
-        {{#if access}}
-          <div class='c-content'>
-            {{> post-image }}
-            {{ content }}
-          </div>
+        <div class='c-content'>
+          {{> post-image }}
+          {{ content }}
+        </div>
 
+        {{#if access}}
           <div class='o-grid'>
             <div class='o-grid__col o-grid__col--4-4-s o-grid__col--3-4-m'>
               <div class='c-tags'>
@@ -85,13 +85,11 @@
           {{> post-upgrade-cta }}
         {{/unless}}
 
-        {{#if @labs.members}}
-          {{#unless @member}}
-            {{#if access}}
-              {{> subscribe-form}}
-            {{/if}}
-          {{/unless}}
-        {{/if}}
+        {{#unless @member}}
+          {{#if access}}
+            {{> subscribe-form}}
+          {{/if}}
+        {{/unless}}
 
         {{#if access}}
           {{> disqus}}

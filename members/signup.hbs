@@ -21,12 +21,12 @@
     </div>
 
   {{else}}
-  {{!-- Not logged in: Sign up --}}
+  {{!-- Not logged in: Subscribe --}}
     <div class='o-grid'>
       <div class='o-grid__col o-grid__col--2-4-m o-grid__col--center'>
         <div class='c-archive'>
           <h2 class='c-archive__name'>{{t 'Subscribe to {siteTitle}' siteTitle=@site.title}}</h2>
-          <p class='c-archive__description'>{{t 'Get access to premium content.'}}</p>
+          <p class='c-archive__description'></p>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
     <div class='o-grid'>
       <div class='o-grid__col o-grid__col--center o-grid__col--4-4-s o-grid__col--3-4-m o-grid__col--2-4-l'>
         <div class="box box--news-letter subscribe-form">
-          <form data-members-form='signup' class='subscribe-form'>
+          <form data-members-form='subscribe' class='subscribe-form'>
             <div class='form-group'>
               <label for='subscribe-email-signup' class='u-hidden-visually'>{{t 'Email' }}</label>
               <input type='email' id='subscribe-email-signup' placeholder='{{t 'Email' }}' data-members-email>
@@ -47,7 +47,7 @@
           </form>
         </div>
 
-        <p class='u-font-small u-mt-8'>{{t 'Already have an account?' }} <a href='/signin/' class='u-link'>{{t 'Log In' }}</a></p>
+        <p class='u-font-small u-mt-8'>{{t 'Already have an account?' }} <a href='{{ @site.url }}/signin/' class='u-link'>{{t 'Log In' }}</a></p>
       </div>
     </div>
   {{/if}}
