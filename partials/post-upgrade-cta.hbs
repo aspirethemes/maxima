@@ -1,10 +1,20 @@
 <aside class='c-post-upgrade-cta'>
-  {{#if @member}}
-    <h4 class='c-post-upgrade-cta__title'>{{t 'This post is for paying subscribers only'}}</h4>
-  {{else}}
+  {{#has visibility='members'}}
     <h4 class='c-post-upgrade-cta__title'>{{t 'This post is for subscribers only'}}</h4>
-  {{/if}}
+  {{/has}}
 
-  <a class='c-btn' href='{{ @site.url }}/signup/'>{{t 'Subscribe Now'}}</a>
-  <div class='u-font-small u-mt-16'>{{t 'Already have an account?'}} <a href='{{ @site.url }}/signin/' class='u-link'>{{t 'Log In'}}</a></div>
+  {{#has visibility='paid'}}
+    <h4 class='c-post-upgrade-cta__title'>{{t 'This post is for paying subscribers only'}}</h4>
+  {{/has}}
+
+  {{#has visibility='tiers'}}
+    <h4 class='c-post-upgrade-cta__title'>{{t 'This post is for subscribers on the '}}{{ tiers }}</h4>
+  {{/has}}
+
+  {{#if @member}}
+    <a class='c-btn' href='#/portal/account/plans'>{{t 'Upgrade your account'}}</a>
+  {{else}}
+    <a class='c-btn' href='#/portal/signup'>{{t 'Subscribe'}}</a>
+    <div class='u-font-small u-mt-16'>{{t 'Already have an account?'}} <a href='#/portal/signin' class='u-link'>{{t 'Log In'}}</a></div>
+  {{/if}}
 </aside>

@@ -37,11 +37,10 @@
               <ul class='c-nav o-plain-list '>
                 {{ navigation }}
                 {{#if @member}}
-                  <li class='c-nav__item'><a href='{{ @site.url }}/signup/' class='c-nav__link'>{{t 'Account' }}</a></li>
-                  <li class='c-nav__item'><a href='#signout' class='c-nav__link' data-members-signout>{{t 'Log Out' }}</a></li>
+                  <li class='c-nav__item is-membership'><a href='#/portal/account' class='c-nav__link'>{{t 'Account' }}</a></li>
                 {{else}}
-                  <li class='c-nav__item'><a href='{{ @site.url }}/signin/' class='c-nav__link'>{{t 'Log In' }}</a></li>
-                  <li class='c-nav__item'><a href='{{ @site.url }}/signup/' class='c-nav__link u-font-bold'>{{t 'Subscribe' }}</a></li>
+                  <li class='c-nav__item is-membership'><a href='#/portal/signin' class='c-nav__link'>{{t 'Log In' }}</a></li>
+                  <li class='c-nav__item is-membership'><a href='#/portal/signup' class='c-nav__link u-font-bold'>{{t 'Subscribe' }}</a></li>
                 {{/if}}
               </ul>
 

@@ -1,10 +1,9 @@
 {
   "name": "maxima",
   "description": "Minimal Blog & Magazine Ghost Theme",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "engines": {
-    "ghost": ">=4.0.0",
-    "ghost-api": "v4"
+    "ghost": ">=5.0.0"
   },
   "keywords": [
     "ghost-theme"
@@ -40,7 +39,10 @@
     "url": "https://aspirethemes.com/"
   },
   "config": {
-    "posts_per_page": 16
+    "posts_per_page": 16,
+    "card_assets": {
+      "exclude": ["bookmark", "gallery"]
+    }
   },
   "devDependencies": {
     "dart-sass": "^1.25.0",
