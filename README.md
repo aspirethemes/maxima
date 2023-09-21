@@ -2,4 +2,4 @@
 
 * * *
 
-📄 [Theme Documentation](https://aspirethemes.com/docs/maxima-ghost/)
+📄 [Theme Documentation](https://aspirethemes.com/docs/maxima)
